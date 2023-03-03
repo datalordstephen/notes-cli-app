@@ -11,7 +11,7 @@ notes = [
 
 @app.get("/notes")
 def return_all():
-    return {"notes": notes}
+    return {"notes:": notes}
 
 
 @app.post("/notes")
