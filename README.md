@@ -5,7 +5,7 @@ I created the API using **FastAPI**, and I consumed it using the in-built **requ
 
 To run this project locally, you need to have python installed.
 
-###Installing Dependencies
+### Installing Dependencies
 >You need to have [git](https://git-scm.com/) inistalled to clone the repository
 
 To clone the repo, run
@@ -25,7 +25,7 @@ You'll also need to download an [ASGI server](https://asgi.readthedocs.io/en/lat
 `pip install "uvicorn[standard]"
 `
 
-###Running the project
+### Running the project
 The server needs to be run first. To do that, run
 `uvicorn notes-api:app`
 
