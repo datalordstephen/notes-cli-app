@@ -18,12 +18,17 @@ To change directory, run
 cd notes-cli-app
 ```
 
-I made use of the inbuilt **`argparse`** library to parse arguments from the command line. It comes downloaded with **`python3`**, so it dosen't need to be downloaded.
 
-To download **`FastAPI`** with pip, run
+There are 2 versions of this app.  
+
+
+For `notes.py`, I made use of the inbuilt **`argparse`** library to parse arguments from the command line.  
+
+
+For `fire-notes.py`, i made use of the **`fire`** library which can be installed alongside **`FastAPI`** by running  
 ```
-pip install fastapi
-```
+pip install fire fastapi
+``` 
 
 You'll also need to download an [ASGI server](https://asgi.readthedocs.io/en/latest/), I made use of uvicorn as used in the **FastAPI** [documentation](https://fastapi.tiangolo.com/).
 ```
@@ -36,35 +41,37 @@ The **server** needs to be run first. To do that, run
 uvicorn notes-api:app
 ```
 
+### Usage
 The **`CLI`** tool can carry out 4 operations: `fetch all notes`, `create a new note`, `update an existing note`, and `delete a note`.
 
-To **`fetch`** all dummy notes, run 
+- To **`fetch`** all dummy notes, run 
 ```
 py notes.py fetch-notes
 ```
 
-To **`create`** a new note, run 
+
+- To **`create`** a new note, run 
 ```
 py notes.py create-note "content"
 ``` 
 Where `"content"` should be the content of the note to be created.
 
 
-To **`update`** an existing note, run
+
+- To **`update`** an existing note, run
 ```
-py notes.py update-note <id> "content"
+py notes.py update-note <note-id> "note-content"
 ```
-Where `<id>` is the unique id of the note you want to update, and `"content"` is the new content you want to overwrite the note with.
+Where `<id>` is the unique id of the note you want to update
 
 
-To **`delete`** a note, run 
+- To **`delete`** a note, run 
 ```
 py notes.py delete-note <id>
 ```
 Where `id` is the unique id of the note to be deleted.
 
 
-
-> Happy testing! :)
+> Note: The same commands can be used to run the **fire-notes.py** file
 
 
