@@ -5,7 +5,7 @@ I created the API using **`FastAPI`**, and I consumed it using the in-built **`r
 
 To run this project locally, you need to have python installed.
 
-### Installing Dependencies
+### Prerequisites
 >You need to have [git](https://git-scm.com/) inistalled to clone the repository
 
 To clone the repo, run
@@ -25,15 +25,13 @@ There are 2 versions of this app.
 For `notes.py`, I made use of the inbuilt **`argparse`** library to parse arguments from the command line.  
 
 
-For `fire-notes.py`, i made use of the **`fire`** library which can be installed alongside **`FastAPI`** by running  
-```
-pip install fire fastapi
-``` 
+For `fire-notes.py`, i made use of the **`fire`** library.
 
-You'll also need to download an [ASGI server](https://asgi.readthedocs.io/en/latest/), I made use of uvicorn as used in the **FastAPI** [documentation](https://fastapi.tiangolo.com/).
+### Installing Dependencies
+To install the needed packages, run
 ```
-pip install "uvicorn[standard]"
-```
+pip install -r requirements.txt
+``` 
 
 ### Running the project
 The **server** needs to be run first. To do that, run
